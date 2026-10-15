@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>이모지 복사</title>
+<meta name="theme-color" content="#FAF7F2">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="이모지 복사">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+<header class="top glass">
+  <div class="row">
+    <h1 class="brand">💖 이모지 복사</h1>
+    <div class="tools">
+      <button id="toneBtn" class="pill" aria-label="피부색">✋</button>
+      <button id="basketBtn" class="pill" aria-pressed="false">🧺 모아담기</button>
+    </div>
+  </div>
+  <div class="search"><input id="q" type="search" placeholder="검색: 하트, 곰, 웃음…" autocomplete="off" enterkeyhint="search"><button id="clearQ" aria-label="지우기">✕</button></div>
+  <div id="tones" class="tones"></div>
+  <nav id="cats" class="cats"></nav>
+</header>
+<main id="main">
+  <section id="favSec" class="sec" hidden><h2>💟 즐겨찾기</h2><div class="grid" id="favGrid"></div></section>
+  <section id="recSec" class="sec" hidden><h2>🕘 최근 사용 <button id="clearRec" class="mini">비우기</button></h2><div class="grid" id="recGrid"></div></section>
+  <section id="searchSec" class="sec" hidden><h2 id="searchTitle"></h2><div class="grid" id="searchGrid"></div><p id="empty" class="empty" hidden>찾는 이모지가 없어요 🥲</p></section>
+  <div id="groups"></div>
+  <p class="foot">탭하면 복사 · 길게 누르면 즐겨찾기<br>이모지 데이터: Unicode CLDR · emojibase</p>
+</main>
+<div id="basket" class="basket glass">
+  <div id="basketStr" class="bstr"></div>
+  <button id="bBack" class="mini" aria-label="하나 지우기">⌫</button>
+  <button id="bClear" class="mini">비우기</button>
+  <button id="bCopy" class="pill strong">복사</button>
+</div>
+<div id="toast" class="toast"></div>
+<div id="hearts"></div>
+<script src="app.js?v=1"></script>
+</body>
+</html>
